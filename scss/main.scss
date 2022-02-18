@@ -1,6 +1,16 @@
 // scss variables
 $primary-color: #6875F3;
+$text-color: #ec9c09;
+
+// map
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+);
 
 body {
     background: $primary-color;
+    font-weight: map-get($font-weights , bold );
+    color: $text-color;
 }
