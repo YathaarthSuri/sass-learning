@@ -2,9 +2,14 @@
 @import './variables';
 // Above is a partial (if project is large then we can create small components and the compiler will only read them when they are imported)
 
+// Functions
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
 body {
     background: $primary-color;
-    font-weight: map-get($font-weights , bold );
+    font-weight: map-get($font-weights , bold);
     color: $text-color;
 }
 
@@ -17,6 +22,8 @@ body {
 
     #{&}-paragraph{
         background-color: $secondary-color;
+
+        font-weight: weight(bold);
 
         &:hover{
             color:pink;

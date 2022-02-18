@@ -18,6 +18,7 @@ body {
 
 .main .main-paragraph {
   background-color: #f37908;
+  font-weight: 700;
 }
 
 .main .main-paragraph:hover {
