@@ -1,6 +1,27 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #6875F3;
   font-weight: 700;
-  color: #ec9c09;
+  color: #82ec09;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main .main-paragraph {
+  background-color: #f37908;
+}
+
+.main .main-paragraph:hover {
+  color: pink;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

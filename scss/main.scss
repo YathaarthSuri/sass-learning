@@ -1,16 +1,27 @@
-// scss variables
-$primary-color: #6875F3;
-$text-color: #ec9c09;
-
-// map
-$font-weights: (
-    "regular": 400,
-    "medium": 500,
-    "bold": 700,
-);
+@import './resets';
+@import './variables';
+// Above is a partial (if project is large then we can create small components and the compiler will only read them when they are imported)
 
 body {
     background: $primary-color;
     font-weight: map-get($font-weights , bold );
     color: $text-color;
+}
+
+.main{
+    width: 80%;
+    margin: 0 auto;
+
+    // in below & replaces the parent tag that is (.main)
+    // and # tells us that main-paragraph should be the one that is inside parent component and it should not be styled outside it
+
+    #{&}-paragraph{
+        background-color: $secondary-color;
+
+        &:hover{
+            color:pink;
+            cursor: pointer;
+        }
+    }
+
 }
