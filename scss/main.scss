@@ -7,6 +7,13 @@
     @return map-get($font-weights, $weight-name);
 }
 
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
 body {
     background: $primary-color;
     font-weight: map-get($font-weights , bold);
@@ -16,6 +23,8 @@ body {
 .main{
     width: 80%;
     margin: 0 auto;
+
+    @include flexCenter(row);    
 
     // in below & replaces the parent tag that is (.main)
     // and # tells us that main-paragraph should be the one that is inside parent component and it should not be styled outside it
