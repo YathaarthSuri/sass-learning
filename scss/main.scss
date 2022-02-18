@@ -7,11 +7,29 @@
     @return map-get($font-weights, $weight-name);
 }
 
+// use mixin for styles and functions for computing values
+
 @mixin flexCenter($direction){
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true){
+    @if $light-theme{
+        background: lighten($primary-color, 100%);
+        color: darken($text-color, 100%);
+    }
+    // @else {
+    //     background: $secondary-color;
+    // }
+}
+
+@mixin mobile{
+    @media (max-width: $mobile){
+        @content;
+    }
 }
 
 body {
@@ -29,7 +47,7 @@ body {
     // in below & replaces the parent tag that is (.main)
     // and # tells us that main-paragraph should be the one that is inside parent component and it should not be styled outside it
 
-    #{&}-paragraph{
+    #{&}-paragraph1{
         background-color: $secondary-color;
 
         font-weight: weight(bold);
@@ -40,4 +58,12 @@ body {
         }
     }
 
+    @include mobile{
+        flex-direction: column;
+    }
+
+}
+
+.light{
+    @include theme($light-theme: true);
 }

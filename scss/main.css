@@ -29,13 +29,27 @@ body {
           flex-direction: row;
 }
 
-.main .main-paragraph {
+.main .main-paragraph1 {
   background-color: #f37908;
   font-weight: 700;
 }
 
-.main .main-paragraph:hover {
+.main .main-paragraph1:hover {
   color: pink;
   cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.light {
+  background: white;
+  color: black;
 }
 /*# sourceMappingURL=main.css.map */
