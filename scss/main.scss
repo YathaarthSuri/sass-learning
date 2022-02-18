@@ -58,6 +58,16 @@ body {
         }
     }
 
+    // In order to inherit properties of another element and add something of our own to new element
+
+    #{&}-paragraph2{
+        @extend .main-paragraph1;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
     @include mobile{
         flex-direction: column;
     }

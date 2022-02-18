@@ -29,14 +29,18 @@ body {
           flex-direction: row;
 }
 
-.main .main-paragraph1 {
+.main .main-paragraph1, .main .main-paragraph2 {
   background-color: #f37908;
   font-weight: 700;
 }
 
-.main .main-paragraph1:hover {
+.main .main-paragraph1:hover, .main .main-paragraph2:hover {
   color: pink;
   cursor: pointer;
+}
+
+.main .main-paragraph2:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 800px) {
